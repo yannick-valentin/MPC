@@ -1,0 +1,64 @@
+#pagewrapper {
+	padding:15px 0;
+}
+
+#controls {display: none;}
+
+#machine {margin: 0 -5px;}
+#machine li {
+	padding: 0 5px 7px;
+}
+
+.pad {
+	padding-bottom: 100%;
+	display: block;
+	background: #CCC;
+	color:#999;
+	text-align: center;
+	position: relative;
+	font-size: 13px;
+	border-bottom: 3px solid #AAA;
+	overflow: hidden;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+	/*.pad:before {
+		position: absolute;
+		top:46%;
+		left: 0;
+		right: 0;
+		content:attr(id);
+	}*/
+
+	.pad:before {
+		content:" ";
+		display: block;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		opacity:0;
+
+		-webkit-transition: opacity ease 100ms;
+		-moz-transition: opacity ease 100ms;
+		-ms-transition: opacity ease 100ms;
+		-o-transition: opacity ease 100ms;
+		transition: opacity ease 100ms;
+
+		background: -moz-radial-gradient(center, ellipse cover,  #AAA 0%, #CCC 100%); /* FF3.6+ */
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#AAA), color-stop(100%,#CCC)); /* Chrome,Safari4+ */
+		background: -webkit-radial-gradient(center, ellipse cover,  #AAA 0%,#CCC 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-radial-gradient(center, ellipse cover,  #AAA 0%,#CCC 100%); /* Opera 12+ */
+		background: -ms-radial-gradient(center, ellipse cover,  #AAA 0%,#CCC 100%); /* IE10+ */
+		background: radial-gradient(ellipse at center,  #AAA 0%,#CCC 100%); /* W3C */
+	}
+
+	.pad:active, .pad.active {
+		position: relative;
+		top: 1px;
+		border-bottom-width:2px;
+	}
+
+	.pad:active:before, .pad.active:before {opacity:0.4}
+
